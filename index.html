@@ -3,14 +3,26 @@
   <head>
     <meta charset="utf-8" />
     <title>nospace</title>
-    <!-- text taht shows on the browsers tab -->
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <link rel="stylesheet" href="style.css" />
     <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r121/three.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/vanta@latest/dist/vanta.birds.min.js"></script>
-    <!-- fixed vanta script, only replace what's between the VANTA.BIRDS brackets -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Pirata+One&display=swap" rel="stylesheet"> 
+
+    <style>
+      @font-face {
+        font-family: adderall;
+        src: url(fonts/font.ttf);
+      }
+      .adderall-font {
+        font-family: adderall;
+      }
+    </style>
+
     <script>
-      window.addEventListener('DOMContentLoaded', () => {
+      document.addEventListener('DOMContentLoaded', () => {
         VANTA.BIRDS({
           el: "#vanta",
           mouseControls: true,
@@ -30,53 +42,31 @@
           separation: 100.00,
           alignment: 1.00,
           cohesion: 1.00
-        })
+        });
+
         setTimeout(() => {
-          const main = document.querySelector('main')
-          main.style.opacity = 1
-          main.style.filter = 'blur(0px)'
-        }, 500)
-      })
-    </script>
-    <!-- mouse cursor -->
-    <script>
+          const main = document.querySelector('main');
+          main.style.opacity = 1;
+          main.style.filter = 'blur(0px)';
+        }, 500);
+      });
+
       document.getElementsByTagName("html")[0].style.cursor = "url('https://ft.fail/404/NORMAL.cur'), auto";
     </script>
-
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Pirata+One&display=swap" rel="stylesheet"> 
-
-<style>
-  @font-face {
-    font-family: adderall;
-    src: url(fonts/font.ttf)
-  }
-</style>
   </head>
   <body>
-    <!-- id for vanta script, don't move this -->
     <div id="vanta"></div>
-
     <main class="animated">
-      <!-- animated class is the fade in on the site, i recommend not touching this -->
       <header>
-        <!-- src= is ur pfp link -->
-        <img src="https://i.ibb.co/qNFSJPD/Bonfire.jpg" />
-        <h1 style="font-family: adderall;">nospace</h1>
+        <img src="https://i.ibb.co/qNFSJPD/Bonfire.jpg" alt="Profile Picture" />
+        <h1 class="adderall-font">nospace</h1>
       </header>
       <ul>
         <li>
-          <a href="https://www.youtube.com/@Nospace.." style="font-family: adderall;">
-            <!-- img src's can technically go in here to have a logo but i was too lazy --> 
-            youtube
-          </a>
+          <a href="https://www.youtube.com/@Nospace.." class="adderall-font">youtube</a>
         </li>
         <li>
-          <a href="https://www.twitch.tv/nosp4ce_" style="font-family: adderall;">
-            <!-- img src's can technically go in here to have a logo but i was too lazy --> 
-            twitch
-          </a>
+          <a href="https://www.twitch.tv/nosp4ce_" class="adderall-font">twitch</a>
         </li>
       </ul>
     </main>
