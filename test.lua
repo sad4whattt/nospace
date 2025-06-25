@@ -11,9 +11,9 @@ LocalPlayer.CharacterAdded:Connect(function(newCharacter)
     if isSpeedHacking then
         toggleSpeedHack()
     end
-end)
+end) -- shit balls
 
-
+-- snipr AI best AI 
 local isSpeedHacking = false
 local originalWalkSpeed = Humanoid.WalkSpeed
 
@@ -23,7 +23,7 @@ local function toggleSpeedHack()
     if not Humanoid then
         print("Speed hack toggle failed: Humanoid not found.")
         return
-    end
+    end -- Penis SLOOALDALSMD LMFOaOOOOOOOO
 
     isSpeedHacking = not isSpeedHacking
 
