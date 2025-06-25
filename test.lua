@@ -11,9 +11,8 @@ LocalPlayer.CharacterAdded:Connect(function(newCharacter)
     if isSpeedHacking then
         toggleSpeedHack()
     end
-end) -- shit balls
+end)
 
--- snipr AI best AI 
 local isSpeedHacking = false
 local originalWalkSpeed = Humanoid.WalkSpeed
 
@@ -23,7 +22,7 @@ local function toggleSpeedHack()
     if not Humanoid then
         print("Speed hack toggle failed: Humanoid not found.")
         return
-    end -- Penis SLOOALDALSMD LMFOaOOOOOOOO
+    end
 
     isSpeedHacking = not isSpeedHacking
 
@@ -40,21 +39,20 @@ end
 UserInputService.InputBegan:Connect(function(input, gameProcessedEvent)
     if input.KeyCode == Enum.KeyCode.Z and not gameProcessedEvent then
         toggleSpeedHack()
-    end --fuck
+    end
 end)
 -- fuck fuck -- fuck ------ fuckkkkkkk
 local function initSpeed()
-    if Humanoid and originalWalkSpeed == nil then
+    if Humanoid and originalWalkSpeed == nil thenalWalkSpeed == nil then
         originalWalkSpeed = Humanoid.WalkSpeed
-    end -- testing
+    end
 end
-
 initSpeed()
-
+initSpeed()
 Humanoid.Changed:Connect(function(property)
-    if property == "WalkSpeed" and not isSpeedHacking then
+Humanoid.Changed:Connect(function(property)
+    if property == "WalkSpeed" and not isSpeedHacking theneedHacking then
         originalWalkSpeed = Humanoid.WalkSpeed
     end
 end)
-
 -- Testing
