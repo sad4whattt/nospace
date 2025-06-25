@@ -40,13 +40,13 @@ end
 UserInputService.InputBegan:Connect(function(input, gameProcessedEvent)
     if input.KeyCode == Enum.KeyCode.Z and not gameProcessedEvent then
         toggleSpeedHack()
-    end
+    end --fuck
 end)
-
+-- fuck fuck -- fuck ------ fuckkkkkkk
 local function initSpeed()
     if Humanoid and originalWalkSpeed == nil then
         originalWalkSpeed = Humanoid.WalkSpeed
-    end
+    end -- testing
 end
 
 initSpeed()
