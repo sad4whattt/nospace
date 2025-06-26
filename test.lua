@@ -11,21 +11,21 @@ LocalPlayer.CharacterAdded:Connect(function(newCharacter)
     if isSpeedHacking then
         toggleSpeedHack()
     end
-end)
+end) -- test comment
 
 local isSpeedHacking = false
 local originalWalkSpeed = Humanoid.WalkSpeed
 
 local SPEED_MULTIPLIER = 1.5
-
+-- test comment-- test comment
 local function toggleSpeedHack()
     if not Humanoid then
         print("Speed hack toggle failed: Humanoid not found.")
         return
     end
-
+-- test comment
     isSpeedHacking = not isSpeedHacking
-
+-- test comment
     if isSpeedHacking then
         print("Speed Hack ON. Multiplier: " .. SPEED_MULTIPLIER .. "x")
         originalWalkSpeed = Humanoid.WalkSpeed
@@ -41,12 +41,12 @@ UserInputService.InputBegan:Connect(function(input, gameProcessedEvent)
         toggleSpeedHack()
     end
 end)
--- fuck fuck -- fuck ------ fuckkkkkkk
+
 local function initSpeed()
     if Humanoid and originalWalkSpeed == nil thenalWalkSpeed == nil then
         originalWalkSpeed = Humanoid.WalkSpeed
-    end
-end
+    end -- test comment
+end -- test comment
 initSpeed()
 initSpeed()
 Humanoid.Changed:Connect(function(property)
