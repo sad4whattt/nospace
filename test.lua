@@ -23,33 +23,31 @@ local function toggleSpeedHack()
         return
     end
 -- test comment
--- test comment
-    if isSpeedHacking then
-        originalWalkSpeed = Humanoid.WalkSpeed
-        Humanoid.WalkSpeed = originalWalkSpeed * SPEED_MULTIPLIER
+    if isSpeedHacking thenacking then
+        originalWalkSpeed = Humanoid.WalkSpeed= Humanoid.WalkSpeed
+        Humanoid.WalkSpeed = originalWalkSpeed * SPEED_MULTIPLIER * SPEED_MULTIPLIER
     else
-        print("Speed Hack OFF")
-        Humanoid.WalkSpeed = originalWalkSpeed
+        print("Speed Hack OFF")print("Speed Hack OFF")
+        Humanoid.WalkSpeed = originalWalkSpeediginalWalkSpeed
     end
 end
-
+UserInputService.InputBegan:Connect(function(input, gameProcessedEvent)
 UserInputService.InputBegan:Connect(function(input, gameProcessedEvent)
     if input.KeyCode == Enum.KeyCode.Z and not gameProcessedEvent then
         toggleSpeedHack()
     end
 end)
-
 local function initSpeed()
-    if Humanoid and originalWalkSpeed == nil thenalWalkSpeed == nil then
+local function initSpeed()
+    if Humanoid and originalWalkSpeed == nil thenalWalkSpeed == nil thenalWalkSpeed == nil thenalWalkSpeed == nil then
         originalWalkSpeed = Humanoid.WalkSpeed
-    end -- test comment
-end -- test comment
+    end
+end
 initSpeed()
     end
-endnnect(function(property)
-Humanoid.Changed:Connect(function(property)
-    if property == "WalkSpeed" and not isSpeedHacking theneedHacking then
+endnnect(function(property)t(function(property)
+Humanoid.Changed:Connect(function(property)nction(property)
+    if property == "WalkSpeed" and not isSpeedHacking theneedHacking theneedHacking theneedHacking then
         originalWalkSpeed = Humanoid.WalkSpeed
     end
 end)
--- Testing
