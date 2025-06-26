@@ -17,17 +17,14 @@ local isSpeedHacking = false
 local originalWalkSpeed = Humanoid.WalkSpeed
 
 local SPEED_MULTIPLIER = 1.5
--- test comment-- test comment
 local function toggleSpeedHack()
     if not Humanoid then
         print("Speed hack toggle failed: Humanoid not found.")
         return
     end
 -- test comment
-    isSpeedHacking = not isSpeedHacking
 -- test comment
     if isSpeedHacking then
-        print("Speed Hack ON. Multiplier: " .. SPEED_MULTIPLIER .. "x")
         originalWalkSpeed = Humanoid.WalkSpeed
         Humanoid.WalkSpeed = originalWalkSpeed * SPEED_MULTIPLIER
     else
@@ -48,8 +45,8 @@ local function initSpeed()
     end -- test comment
 end -- test comment
 initSpeed()
-initSpeed()
-Humanoid.Changed:Connect(function(property)
+    end
+endnnect(function(property)
 Humanoid.Changed:Connect(function(property)
     if property == "WalkSpeed" and not isSpeedHacking theneedHacking then
         originalWalkSpeed = Humanoid.WalkSpeed
