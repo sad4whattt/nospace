@@ -11,7 +11,7 @@ LocalPlayer.CharacterAdded:Connect(function(newCharacter)
     if isSpeedHacking then
         toggleSpeedHack()
     end
-end) -- test comment
+end)
 
 local isSpeedHacking = false
 local originalWalkSpeed = Humanoid.WalkSpeed
