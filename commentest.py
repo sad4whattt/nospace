@@ -1,83 +1,68 @@
-# commentest.py
-# A simple Python script with comments scattered throughout
-
-# Import necessary modules
 import random
 import time
 from datetime import datetime
-# Define constants
 MAX_NUMBER = 100
-MIN_NUMBER = 1
-NUM_GUESSES = 5  # Maximum number of allowed guesses
+MIN_NUMBER = 1ssary modules
+NUM_GUESSES = 5om
 def generate_random_number():
-    """Generate a random number between MIN_NUMBER and MAX_NUMBER."""
-    # Using the random module to create unpredictability
-    return random.randint(MIN_NUMBER, MAX_NUMBER)
-# Main game function
-def guess_the_number():
-    # Print welcome message
+    """Generate a random number between MIN_NUMBER and MAX_NUMBER."""rt datetime
+    return random.randint(MIN_NUMBER, MAX_NUMBER)ts
+def guess_the_number():00
     print("Welcome to the Number Guessing Game!")
-    print(f"I'm thinking of a number between {MIN_NUMBER} and {MAX_NUMBER}")
+    print(f"I'm thinking of a number between {MIN_NUMBER} and {MAX_NUMBER}")mber of allowed guesses
     
-    # Generate the target number
-    target = generate_random_number()
-    
-    # Initialize variables for tracking game state
-    guesses_left = NUM_GUESSES
+    target = generate_random_number()AX_NUMBER."""
+    ability
+    guesses_left = NUM_GUESSESndint(MIN_NUMBER, MAX_NUMBER)
     has_won = False
     
-    # Main game loop
     while guesses_left > 0 and not has_won:
-        # Display guesses remaining
         print(f"\nYou have {guesses_left} guesses left.")
-        
-        # Get user input
+        print(f"I'm thinking of a number between {MIN_NUMBER} and {MAX_NUMBER}")
         try:
-            # Convert input to integer
             guess = int(input("Enter your guess: "))
-            
-            # Check if the guess is valid
+            target = generate_random_number()
             if guess < MIN_NUMBER or guess > MAX_NUMBER:
-                # Invalid range message
-                print(f"Please enter a number between {MIN_NUMBER} and {MAX_NUMBER}.")
-                continue  # Skip this iteration without decreasing guesses_left
-                
-            # Decrease remaining guesses
+                print(f"Please enter a number between {MIN_NUMBER} and {MAX_NUMBER}.") tracking game state
+                continueNUM_GUESSES
+                has_won = False
             guesses_left -= 1
             
-            # Check if the guess is correct
-            if guess == target:
-                # Player wins
+            if guess == target:has_won:
                 has_won = True
-                print(f"Congratulations! You guessed the number {target}!")
+                print(f"Congratulations! You guessed the number {target}!")print(f"\nYou have {guesses_left} guesses left.")
             elif guess < target:
-                # Provide hint
-                print("Too low! Try a higher number.")
-            else:  # guess > target
-                # Provide hint
+                print("Too low! Try a higher number.")t user input
+            else:
                 print("Too high! Try a lower number.")
-                
+                guess = int(input("Enter your guess: "))
         except ValueError:
-            # Handle non-integer inputs
             print("Please enter a valid number.")
-    
-    # Game over - check if player lost
+    ess > MAX_NUMBER:
     if not has_won:
-        print(f"\nGame over! The number was {target}.")
-# Run the game if this script is executed directly
-if __name__ == "__main__":
-    # Record the start time
+        print(f"\nGame over! The number was {target}.")BER}.")
+if __name__ == "__main__":continue  # Skip this iteration without decreasing guesses_left
     start_time = time.time()
+    ing guesses
+    print(f"Game session started at {datetime.now().strftime('%Y-%m-%d %H:%M:%S')}")guesses_left -= 1
     
-    # Log the game session
-    print(f"Game session started at {datetime.now().strftime('%Y-%m-%d %H:%M:%S')}")
-    
-    # Start the game
-    guess_the_number()
-    
-    # Calculate and display game duration
+    guess_the_number()s is correct
+    t:
     elapsed_time = time.time() - start_time
     print(f"\nYou played for {elapsed_time:.2f} seconds.")
+            elif guess < target:
+                print("Too low! Try a higher number.")
+                # Provide hint
+                
+            # Handle non-integer inputs
     
-    # End of script comment
+    if not has_won:
+# Run the game if this script is executed directly
+    # Record the start time
+    
+    print(f"Game session started at {datetime.now().strftime('%Y-%m-%d %H:%M:%S')}")
+    # Start the game
+    
+    elapsed_time = time.time() - start_time
+    
     # Thanks for playing!
