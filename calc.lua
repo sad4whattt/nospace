@@ -1,12 +1,4 @@
 
-            
-lua
-
-            
-
--- Simple Lua Calculator
-
--- Function to add two numbers
 function add(a, b)
     return a + b
 end
