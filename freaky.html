@@ -33,6 +33,19 @@
                 background-position: 0% 50%;
             }
         }
+        .particle {
+            position: absolute;
+            width: 10px;
+            height: 10px;
+            background-color: white;
+            border-radius: 50%;
+            pointer-events: none;
+            animation: fadeOut 1s linear forwards;
+        }
+        @keyframes fadeOut {
+            from { opacity: 1; }
+            to { opacity: 0; }
+        }
     </style>
 </head>
 <body class="min-h-screen flex flex-col items-center justify-center p-4 relative overflow-hidden">
@@ -66,5 +79,17 @@
             </a>
         </div>
     </div>
+    <script>
+        document.addEventListener('mousemove', function(event) {
+            const particle = document.createElement('div');
+            particle.classList.add('particle');
+            particle.style.left = event.clientX + 'px';
+            particle.style.top = event.clientY + 'px';
+            document.body.appendChild(particle);
+            setTimeout(() => {
+                particle.remove();
+            }, 1000);  // Remove after 1 second
+        });
+    </script>
 </body> <!-- waaaaaaa -->
 </html>
