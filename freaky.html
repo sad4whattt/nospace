@@ -33,7 +33,7 @@
                 background-position: 0% 50%;
             }
         }
-        /* Styles for snow particles */
+        /* Styles for snow particles (not used) */
         #snow-canvas {
             position: fixed;
             top: 0;
@@ -134,7 +134,6 @@
                 particlesArray[i].update();
                 particlesArray[i].draw();
             }
-            requestAnimationFrame(animate);
         }
 
         const mouse = { x: null, y: null };
