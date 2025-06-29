@@ -1,4 +1,3 @@
-```html
 <!DOCTYPE html>
 <html lang="en" class="bg-black text-white">
 <head>
@@ -37,3 +36,70 @@
         }
         .particle {
             position: absolute;
+            width: 10px;
+            height: 10px;
+            background-color: white;
+            border-radius: 50%;
+            pointer-events: none;
+            animation: fadeOut 1s linear forwards;
+        }
+        @keyframes fadeOut {
+            from { opacity: 1; }
+            to { opacity: 0; }
+        }
+    </style>
+</head>
+<body class="min-h-screen flex flex-col items-center justify-center p-4 relative overflow-hidden">
+    <div class="max-w-md w-full bg-black rounded-lg shadow-lg p-6 border border-white">
+        <div class="flex flex-col items-center mb-6">
+            <img src="https://via.placeholder.com/150" alt="Profile Picture" class="w-32 h-32 rounded-full mb-4 object-cover">
+            <h1 class="text-2xl font-bold text-center username-animation text-white relative">YourUsername</h1>
+        </div>
+
+        <div class="mb-6">
+            <h2 class="text-xl font-semibold mb-2">About Me</h2>
+            <p class="text-white">This is a simple bio link page created with Tailwind CSS. You can customize this section to tell people about yourself.</p>
+        </div>
+
+        <div class="flex flex-col space-y-4">
+            <a href="#" class="bg-black hover:bg-gray-900 rounded-lg p-4 transition-colors">
+                <h3 class="text-lg font-medium">Link 1</h3>
+                <p class="text-gray-400 text-sm">Description for link 1</p>
+            </a>
+            <a href="#" class="bg-black hover:bg-gray-900 rounded-lg p-4 transition-colors">
+                <h3 class="text-lg font-medium">Link 2</h3>
+                <p class="text-gray-400 text-sm">Description for link 2</p>
+            </a>
+            <a href="#" class="bg-black hover:bg-gray-900 rounded-lg p-4 transition-colors">
+                <h3 class="text-lg font-medium">Link 3</h3>
+                <p class="text-gray-400 text-sm">Description for link 3</p>
+            </a>
+            <a href="#" class="bg-black hover:bg-gray-900 rounded-lg p-4 transition-colors">
+                <h3 class="text-lg font-medium">Link 4</h3>
+                <p class="text-gray-400 text-sm">Description for link 4</p>
+            </a>
+        </div>
+    </div>
+    <script>
+        let canCreate = true;
+
+        document.addEventListener('mousemove', function(event) {
+            if (canCreate) {
+                const particle = document.createElement('div');
+                particle.classList.add('particle');
+                particle.style.left = event.clientX + 'px';
+                particle.style.top = event.clientY + 'px';
+                document.body.appendChild(particle);
+                setTimeout(() => {
+                    particle.remove();
+                }, 1000);  // Remove after 1 second
+
+                canCreate = false;
+                setTimeout(() => {
+                    canCreate = true;
+                }, 80);  // Reduced throttle to 80ms for slightly more particles
+            }
+        });
+    </script>
+</body> <!-- waaaaaaa -->
+</html>
