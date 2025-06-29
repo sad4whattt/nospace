@@ -82,7 +82,7 @@
     </div>
     <script>
         let canCreate = true;
-        
+
         document.addEventListener('mousemove', function(event) {
             if (canCreate) {
                 const particle = document.createElement('div');
@@ -93,11 +93,11 @@
                 setTimeout(() => {
                     particle.remove();
                 }, 1000);  // Remove after 1 second
-                
+
                 canCreate = false;
                 setTimeout(() => {
                     canCreate = true;
-                }, 100);  // Throttle to 100ms
+                }, 80);  // Reduced throttle to 80ms for slightly more particles
             }
         });
     </script>
