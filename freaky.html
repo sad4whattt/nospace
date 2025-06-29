@@ -50,16 +50,16 @@
             position: absolute;
             color: white;
             font-size: 20px;
-            animation: star-animation 2s linear infinite;
+            animation: float-fade 4s linear infinite;
         }
-        @keyframes star-animation {
-            0% {
+        @keyframes float-fade {
+            0%, 100% {
                 transform: translateY(0);
                 opacity: 1;
             }
-            100% {
-                transform: translateY(-100px);
-                opacity: 0;
+            50% {
+                transform: translateY(-20px);
+                opacity: 0.5;
             }
         }
     </style>
@@ -70,14 +70,14 @@
             <img src="https://via.placeholder.com/150" alt="Profile Picture" class="w-32 h-32 rounded-full mb-4 object-cover">
             <h1 class="text-2xl font-bold text-center username-animation text-white relative">YourUsername
                 <span class="star" style="left: 10%; animation-delay: 0s;">*</span>
-                <span class="star" style="left: 20%; animation-delay: 0.2s;">*</span>
-                <span class="star" style="left: 30%; animation-delay: 0.4s;">*</span>
-                <span class="star" style="left: 40%; animation-delay: 0.6s;">*</span>
-                <span class="star" style="left: 50%; animation-delay: 0.8s;">*</span>
+                <span class="star" style="left: 20%; animation-delay: 1s;">*</span>
+                <span class="star" style="left: 30%; animation-delay: 2s;">*</span>
+                <span class="star" style="left: 40%; animation-delay: 3s;">*</span>
+                <span class="star" style="left: 50%; animation-delay: 0s;">*</span>
                 <span class="star" style="left: 60%; animation-delay: 1s;">*</span>
-                <span class="star" style="left: 70%; animation-delay: 1.2s;">*</span>
-                <span class="star" style="left: 80%; animation-delay: 1.4s;">*</span>
-                <span class="star" style="left: 90%; animation-delay: 1.6s;">*</span>
+                <span class="star" style="left: 70%; animation-delay: 2s;">*</span>
+                <span class="star" style="left: 80%; animation-delay: 3s;">*</span>
+                <span class="star" style="left: 90%; animation-delay: 0s;">*</span>
             </h1>
         </div>
 
