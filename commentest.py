@@ -1,26 +1,17 @@
-# SCream team
-# Testing
-# Hello there
-
 def add(x, y):
-  """Adds two numbers."""
   return x + y
 
 def subtract(x, y):
-  """Subtracts two numbers."""
   return x - y
 
 def multiply(x, y):
-  """Multiplies two numbers."""
   return x * y
 
 def divide(x, y):
-  """Divides two numbers. Handles division by zero."""
   if y == 0:
     return "Error! Division by zero."
   return x / y
 
-# Main calculator loop
 while True:
   print("\nSelect operation:")
   print("1. Add")
@@ -37,23 +28,18 @@ while True:
       num2 = float(input("Enter second number: "))
     except ValueError:
       print("Invalid input. Please enter numbers only.")
-      continue  # Go back to the beginning of the loop
+      continue
 
     if choice == '1':
       print(num1, "+", num2, "=", add(num1, num2))
-
     elif choice == '2':
       print(num1, "-", num2, "=", subtract(num1, num2))
-
     elif choice == '3':
       print(num1, "*", num2, "=", multiply(num1, num2))
-
     elif choice == '4':
       print(num1, "/", num2, "=", divide(num1, num2))
-
   elif choice == '5':
     print("Exiting calculator.")
-    break  # Exit the loop and end the program
-
+    break
   else:
     print("Invalid input. Please enter a number between 1 and 5.")
