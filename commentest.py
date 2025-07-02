@@ -43,3 +43,6 @@ while True:
     break
   else:
     print("Invalid input. Please enter a number between 1 and 5.")
+# This file implements a simple command-line calculator that allows users to perform basic arithmetic operations.
+# It handles invalid inputs, such as non-numeric characters and division by zero, and provides informative error messages.
+# The available operations are addition, subtraction, multiplication, and division.
