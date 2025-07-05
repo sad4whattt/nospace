@@ -1,1 +1,1 @@
-Hell yeah.
+puts "Hell yeah!"
