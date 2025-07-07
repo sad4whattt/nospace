@@ -76,5 +76,6 @@ def main():
         print(f"Index of 10: {index}")
         print(f"Item at index: {my_list[index]}")
 
-if __name__ == "__main__":
+
+if __name__ == "__main__":  # This block runs the main function when the script is executed directly (not imported)
     main()
